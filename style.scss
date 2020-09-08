@@ -1,0 +1,1110 @@
+@charset 'utf-8';
+
+// 初期表示モーダル
+
+.visit-modal {
+    display: none;
+}
+
+// ドットナビ
+
+.dnav {
+    position: fixed;
+    top: 45%;
+    right: 2%;
+    margin-top: -42px;
+    z-index: 5;
+    li {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-bottom: 5px;
+        background: #e95513;
+        opacity: 0.4;
+    }
+    li.active {
+        opacity: 1;
+    }
+}
+
+//  ナビ
+
+.top-nav {
+    width: fit-content;
+    &_burger {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        a {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            padding: 20px;
+            background-color: #ec6e36;
+            cursor: pointer;
+        }
+        span {
+            display: block;
+            width: 20px;
+            height: 4px;
+            background-color: white;
+            position: absolute;
+            left: 10px;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+        span:nth-of-type(1) {
+            top: 10px;
+            animation: burgerBtn01 0.75s forwards;
+        }
+        span:nth-of-type(2) {
+            top: 17px;
+        }
+        span:nth-of-type(3) {
+            top: 24px;
+            animation: burgerBtn03 0.75s forwards;
+        }
+        span.show:nth-of-type(1) {
+            animation: activeBurgerBtn01 0.75s forwards;
+        }
+        span.show:nth-of-type(2) {
+            opacity: 0;
+        }
+        span.show:nth-of-type(3) {
+            animation: activeBurgerBtn03 0.75s forwards;
+        }
+    }
+    &_contents {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 230px;
+        height: 400px;
+        padding-top: 60px;
+        overflow: hidden;
+        z-index: 2;
+        .bg-circle {
+            content: "";
+            position: absolute;
+            top: -750px;
+            left: -750px;
+            width: 1500px;
+            height: 1500px;
+            // margin-top: -750px;
+            // margin-left: -750px;
+            background: #ec6e36;
+            border-radius: 50%;
+            z-index: -1;
+            transition: all 0.3s ease-out;
+            transform: scale(0);
+        }
+        .bg-circle.show {
+            transform: scale(1);
+            transition: all 0.6s ease-out;
+        }
+        .top-nav_contents_list {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        .top-nav_contents_list.show {
+            display: flex;
+        }
+        li {
+            margin-bottom: 21px;
+        }
+    }
+}
+
+// TOP
+
+.top {
+    position: relative;
+    background-image: url("common/img/top/MtFuji.png"), url("http://www.nomatokyo.ayapro.ne.jp/img/top_img_main.png"),
+        url("common/img/top/towers.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 50% 48px, 50% 180px, calc(50% - 10px) 285px;
+    height: 100vh;
+    overflow: hidden;
+    .shrimp-left {
+        position: absolute;
+        top: 85px;
+        left: calc(50% - 145px);
+        animation: moveLeftShrimp steps(3) 1s infinite;
+    }
+    .shrimp-right {
+        position: absolute;
+        top: 85px;
+        right: calc(50% - 145px);
+        animation: moveRightShrimp steps(3) 1s infinite;
+    }
+    .twitter {
+        position: absolute;
+        top: 50px;
+        left: calc(50% - 215px);
+    }
+    .twitter::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ec6e36;
+        opacity: 0.7;
+        position: absolute;
+        top: 45px;
+        left: calc(50% + 20px);
+    }
+    .twitter::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #ec6e36;
+        opacity: 0.5;
+        position: absolute;
+        top: 60px;
+        left: calc(50% + 33px);
+    }
+    .facebook {
+        position: absolute;
+        top: 50px;
+        right: calc(50% - 215px);
+    }
+    .facebook::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ec6e36;
+        opacity: 0.7;
+        position: absolute;
+        top: 45px;
+        right: calc(50% + 20px);
+    }
+    .facebook::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #ec6e36;
+        opacity: 0.5;
+        position: absolute;
+        top: 60px;
+        right: calc(50% + 33px);
+    }
+    .notice {
+        position: absolute;
+        top: 40px;
+        right: calc(50% - 390px);
+        img {
+            width: 100%;
+        }
+    }
+    .top-airplane {
+        position: absolute;
+        top: 235px;
+        left: -10%;
+        animation: airplaneToRight linear 30s infinite;
+    }
+    .bottom-airplane {
+        position: absolute;
+        top: 355px;
+        right: -10%;
+        animation: airplaneToLeft linear 25s infinite;
+    }
+    .release-text {
+        display: inline-block;
+        position: relative;
+        top: 660px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 22px;
+        font-weight: 600;
+        //letter-spacing: 1.2px;
+        color: #0041a0;
+        .small {
+            font-size: 12px;
+        }
+        .week {
+            display: inline-block;
+            position: absolute;
+            left: 77px;
+            top: 4px;
+            width: 22px;
+            height: 22px;
+            background-color: #0041a0;
+            border-radius: 50%;
+            color: white;
+            font-size: 10px;
+            text-align: center;
+            line-height: 22px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+// バナーエリア
+.banner-area {
+    background-color: #ec6e36;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 28%;
+        margin: auto;
+        padding: 15px 0;
+    }
+    li {
+        display: inline-block;
+        width: 193px;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+// INTRODUCTION
+
+.introduction {
+    position: relative;
+    border-top: 30px solid #ec6e36;
+    &_top {
+        background-color: #ec6e36;
+    }
+    &_contents {
+        position: relative;
+        background-image: url("http://www.nomatokyo.ayapro.ne.jp/img/bg_intro.jpg");
+        padding-top: 120px;
+        overflow: hidden;
+        z-index: 0;
+        .texts {
+            width: 67%;
+            margin: 0 auto;
+            color: white;
+            margin-bottom: 50px;
+        }
+        .title {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 0 20px 0 10px;
+            margin-bottom: 20px;
+            background-color: #ec6e36;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            line-height: 21px;
+        }
+        .explanation {
+            font-size: 12px;
+            letter-spacing: 0.9px;
+            line-height: 25px;
+            font-weight: 600;
+        }
+    }
+    &_contents::before {
+        content: "";
+        background: inherit;
+        filter: blur(1.5px);
+        position: absolute;
+        top: -1.5px;
+        left: -1.5px;
+        right: -1.5px;
+        bottom: -1.5px;
+        z-index: -1;
+    }
+    &_bottom {
+        content: "";
+        width: 100%;
+        height: 60px;
+        padding: 12px 0;
+        background-color: #ec6e36;
+        background-image: url("common/img/introduction/ant.png");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 70px) 7px;
+    }
+}
+
+// STORY
+
+.story {
+    position: relative;
+    border-top: 30px solid #ec6e36;
+    background-image: url("common/img/story/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    &_top {
+        background-color: #ec6e36;
+    }
+    &_circle {
+        width: 1000px;
+        height: 1000px;
+        border: 2px dashed rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        margin: 20px auto 0;
+        padding: 20px;
+        .bg-circle {
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px dashed rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            padding-top: 150px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 30px;
+        }
+        .two-color {
+            padding: 25px 0;
+            font-size: 38px;
+            font-weight: 600;
+            color: #ffa07a;
+        }
+    }
+    .two-color01 span:nth-child(even) {
+        color: #f24000;
+    }
+    .two-color02 span:nth-child(odd) {
+        color: #f24000;
+    }
+    &_bottom {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        padding: 12px 0;
+        margin-top: 20px;
+        background-color: #265dae;
+        img {
+            position: absolute;
+            top: 8px;
+            right: 150px;
+            z-index: 1;
+        }
+    }
+}
+
+// CAST
+
+.cast {
+    position: relative;
+    border-top: 30px solid #265dae;
+    &_top {
+        background-color: #265dae;
+    }
+    &_headchef {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 65%;
+        margin: auto;
+        padding-top: 100px;
+        .text {
+            height: 100%;
+            margin-left: 20px;
+        }
+        .headtext {
+            display: inline-block;
+            font-size: 22px;
+            color: #ec6e36;
+            font-weight: 600;
+            border-bottom: 2px dashed #8c8c8c;
+            margin-bottom: 10px;
+        }
+        .name {
+            font-size: 28px;
+            margin: 20px 0 10px;
+            span {
+                margin-left: 10px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+        .description {
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .spoon {
+            position: absolute;
+            top: 100px;
+            right: 0;
+        }
+        .fork {
+            position: absolute;
+            top: 225px;
+            right: 40px;
+        }
+    }
+    &_chefs {
+        margin: 20px 0 30px;
+        img {
+            margin: auto;
+        }
+    }
+    &_bottom {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        padding: 12px 0;
+        margin-top: 20px;
+        background-color: #265dae;
+        img {
+            position: absolute;
+            top: 7px;
+            right: 150px;
+            z-index: 1;
+        }
+    }
+    .js-cast-airplane.active {
+        animation: castMoveAirplane ease 3s forwards;
+    }
+}
+
+// STAFF
+
+.staff {
+    position: relative;
+    border-top: 30px solid #265dae;
+    background-color: #fffff2;
+    &_top {
+        background-color: #265dae;
+    }
+    &_contents {
+        width: 65%;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
+    .note {
+        width: 70%;
+        .title {
+            position: relative;
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 600;
+            color: #265dae;
+            border-bottom: 2px dashed #8c8c8c;
+            padding-right: 40px;
+        }
+        .title::after {
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            content: "";
+            background-image: url("common/img/staff/ant.png");
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 20px;
+        }
+        .text {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 27px;
+            margin-top: 20px;
+        }
+    }
+    .profile {
+        display: flex;
+        align-items: flex-end;
+        margin: 40px 0 30px;
+        .text {
+            position: relative;
+            height: 100%;
+        }
+        .text::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -500px;
+            background-image: url("http://www.nomatokyo.ayapro.ne.jp/img/staff_img1.svg");
+            background-repeat: no-repeat;
+            width: 225px;
+            height: 535px;
+        }
+        .title {
+            position: relative;
+            font-size: 24px;
+            font-weight: 600;
+            color: #265dae;
+            border-bottom: 2px dashed #8c8c8c;
+            padding-right: 40px;
+            padding-left: 30px;
+        }
+        .title::before {
+            position: absolute;
+            bottom: -5px;
+            left: 400px;
+            content: "";
+            background-image: url("common/img/staff/ant.png");
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 20px;
+        }
+        .title::after {
+            position: absolute;
+            bottom: -5px;
+            left: 350px;
+            content: "";
+            background-image: url("common/img/staff/ant.png");
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 20px;
+        }
+        .name {
+            font-size: 28px;
+            margin: 20px 0 10px;
+            padding-left: 30px;
+            span {
+                margin-left: 10px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+        .description {
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            padding-left: 30px;
+        }
+        table {
+            font-size: 10px;
+            padding-left: 30px;
+            font-weight: 600;
+        }
+        .filmofraphy {
+            color: #265dae;
+            padding-right: 20px;
+            border-right: 2px dashed black;
+        }
+        td:not(.filmofraphy) {
+            padding-left: 20px;
+        }
+    }
+    &_bottom {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        padding: 12px 0;
+        margin-top: 20px;
+        background-color: #ec6e36;
+        img {
+            position: absolute;
+            top: -30px;
+            right: 300px;
+            z-index: 1;
+        }
+    }
+}
+
+// ABOUT NOMA
+
+.about-noma {
+    position: relative;
+    border-top: 30px solid #ec6e36;
+    &_top {
+        background-color: #ec6e36;
+    }
+    &_contents {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        overflow: hidden;
+    }
+    .texts {
+        width: 60%;
+        padding-top: 110px;
+        p {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 25px;
+            margin-bottom: 30px;
+        }
+        span {
+            float: left;
+            padding: 12px 3px 12px 0;
+            font-size: 4em;
+            color: #ec6e36;
+        }
+        .brackets {
+            margin-left: -25px;
+        }
+    }
+    .scroll-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .scroll-img img:first-child {
+        animation: loopScrollImg 50s -25s linear infinite;
+    }
+    .scroll-img img:last-child {
+        animation: loopScrollImg2 50s linear infinite;
+    }
+    &_bg-blue {
+        width: 100%;
+        height: 60px;
+        padding: 12px 0;
+        background-color: #265dae;
+    }
+    &_bg-lightblue {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        padding: 17px 0;
+        background-color: #5983c1;
+        img {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+        }
+    }
+    &_involvement {
+        background-image: url("common/img/about-noma/bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &_contents {
+            padding: 50px 0 10px;
+            width: 67%;
+            margin: 0 auto;
+        }
+        .people {
+            position: relative;
+            background-color: white;
+            border-top: 5px solid #265dae;
+            padding: 30px 80px 10px;
+            margin-bottom: 60px;
+        }
+        .name {
+            position: relative;
+            font-size: 30px;
+            color: #265dae;
+            margin-bottom: 20px;
+            span {
+                font-size: 14px;
+                font-weight: 600;
+                vertical-align: middle;
+                margin-left: 20px;
+            }
+        }
+        .name::before {
+            position: absolute;
+            content: "";
+            width: 70px;
+            height: 30px;
+            left: -80px;
+            top: 47%;
+            transform: translateY(-50%);
+            background-color: #265dae;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+        .title {
+            font-size: 14px;
+            font-weight: 400;
+            color: #265dae;
+            margin-bottom: 5px;
+        }
+        .text {
+            font-size: 14px;
+            margin-bottom: 20px;
+            span {
+                font-weight: 600;
+            }
+        }
+        .address {
+            position: absolute;
+            top: 30px;
+            right: 80px;
+            color: #26adeb;
+            a {
+                margin-left: auto;
+                width: 150px;
+                border-radius: 30px;
+                border: 2px dashed #26adeb;
+                padding: 8px 5px;
+                margin-bottom: 15px;
+                text-align: center;
+                color: #26adeb;
+                font-size: 12px;
+            }
+            a:hover {
+                background-color: #26adeb;
+                color: white;
+            }
+            p {
+                font-size: 10px;
+                font-weight: 600;
+                text-align: end;
+            }
+        }
+    }
+    &_bottom {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        padding: 12px 0;
+        background-color: #ec6e36;
+        img {
+            position: absolute;
+            top: -50px;
+            left: 200px;
+            z-index: 1;
+        }
+    }
+}
+
+// THEATER
+
+.theater {
+    position: relative;
+    border-top: 30px solid #ec6e36;
+    overflow: hidden;
+    &_top {
+        background-color: #ec6e36;
+    }
+    &_contents {
+        position: relative;
+        width: 67%;
+        margin: 0 auto;
+        padding: 90px 0 140px;
+    }
+    .appreciation {
+        width: 80%;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+    }
+    .cloud-btn {
+        position: absolute;
+        top: 180px;
+        left: 70px;
+    }
+    .area-btns {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin: 60px auto 0;
+        a {
+            margin-left: auto;
+            width: 140px;
+            border-radius: 30px;
+            border: 2px dashed #ec6e36;
+            padding: 8px 5px;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #ec6e36;
+            font-size: 12px;
+        }
+        a:hover {
+            background-color: #ec6e36;
+            color: white;
+        }
+    }
+    .table {
+        p {
+            text-align: center;
+            color: #ec6e36;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+            border: 1px solid #ec6e36;
+            margin-bottom: 40px;
+        }
+        th {
+            background-color: #ec6e36;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        th:nth-of-type(1) {
+            width: 15%;
+        }
+        th:nth-of-type(2) {
+            width: 70%;
+        }
+        .line {
+            border-right: 1px solid white;
+            border-left: 1px solid white;
+        }
+        td {
+            font-size: 16px;
+            border: 1px solid #ec6e36;
+        }
+        a {
+            color: #ec6e36;
+        }
+    }
+    .staff-cast {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 80px;
+        &_staff {
+            width: 50%;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 5px;
+            color: #265dae;
+        }
+        table {
+            width: 100%;
+            font-size: 10px;
+            font-weight: 600;
+            margin: 0 auto;
+        }
+        .eng {
+            text-align: right;
+            padding-right: 20px;
+        }
+        .jap {
+            text-align: left;
+        }
+    }
+    .cloud {
+        position: absolute;
+        bottom: 120px;
+        right: 0;
+    }
+    .move-top {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 125px;
+        height: 125px;
+        // width: 150px;
+        // height: 75px;
+        border-radius: 50%;
+        white-space: nowrap;
+        background-color: #ec6e36;
+        span {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            color: white;
+        }
+    }
+    .move-top:hover {
+        width: 150px;
+        height: 150px;
+    }
+    .move-top:hover span {
+        font-size: 20px;
+    }
+}
+
+// COMMENT
+
+.comment {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    &_bg {
+        background: rgba(0, 0, 0, 0.8);
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+    }
+    &_contents {
+        position: relative;
+        background: #ec6e36;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 700px;
+    }
+    .title {
+        padding: 15px 0;
+        img {
+            margin: 0 auto;
+        }
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        left: 13px;
+    }
+    .people {
+        width: 98%;
+        height: 92%;
+        background: white;
+        margin: 0 auto;
+        padding: 4% 6% 4%;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.4;
+        overflow: scroll;
+        li:not(:last-of-type) {
+            padding-bottom: 30px;
+            border-bottom: 2px dashed #8c8c8c;
+        }
+        li:not(:first-of-type) {
+            padding-top: 30px;
+        }
+        .name {
+            color: #265dae;
+            font-size: 22px;
+            margin-bottom: 5px;
+            span {
+                color: black;
+                font-size: 14px;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+// フッター
+
+footer {
+    padding: 15px 0;
+    background-color: #ffffcc;
+    img {
+        margin: 0 auto;
+    }
+}
+
+// ア二メーション
+
+@keyframes burgerBtn01 {
+    0% {
+        transform: translateY(7px) rotate(45deg);
+    }
+    50% {
+        transform: translateY(7px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes burgerBtn03 {
+    0% {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(-7px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes activeBurgerBtn01 {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(7px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(7px) rotate(-45deg);
+    }
+}
+
+@keyframes activeBurgerBtn03 {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-7px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-7px) rotate(45deg);
+    }
+}
+
+@keyframes moveLeftShrimp {
+    0% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(20deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes moveRightShrimp {
+    0% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(-20deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes airplaneToRight {
+    0% {
+        left: -10%;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes airplaneToLeft {
+    0% {
+        right: -10%;
+    }
+    100% {
+        right: 110%;
+    }
+}
+
+@keyframes castMoveAirplane {
+    0% {
+        right: 150px;
+    }
+    100% {
+        right: 90%;
+    }
+}
+
+@keyframes loopScrollImg {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes loopScrollImg2 {
+    0% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}

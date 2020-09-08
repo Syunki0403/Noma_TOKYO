@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="common/js/jquery.colorbox-min.js"></script>
+    <script src="common/js/script.js"></script>
+    <title>ノーマ東京</title>
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="common/css/template.css">
+    <link rel="stylesheet" href="common/css/colorbox.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <ul class="dnav">
+            <li class="section01 active"></li>
+            <li class="section02"></li>
+            <li class="section03"></li>
+            <li class="section04"></li>
+            <li class="section05"></li>
+            <li class="section06"></li>
+            <li class="section07"></li>
+        </ul>
+        <div class="comment">
+            <div class="comment_bg js-modal-close"></div>
+            <div class="comment_contents">
+                <p class="title">
+                    <img src="http://www.nomatokyo.ayapro.ne.jp/img/nav_comment.svg" alt="COMMENT">
+                </p>
+                <a class="half-transparent close-btn js-modal-close" href="">
+                    <img src="http://www.nomatokyo.ayapro.ne.jp/img/close.svg" alt="">
+                </a>
+                <ul class="people">
+                    <li>
+                        <p class="name">LiLiCo<span>映画コメンテーター</span></p>
+                        <p class="text">
+                            料理だけではない！<br>
+                            仕事に対する誇りや一生懸命頑張ることの大切さ。<br>
+                            これは人生についての映画です。
+                        </p>
+                    </li>
+                    <li>
+                        <p class="name">中村孝則<span>コラムニスト</span></p>
+                        <p class="text">
+                            私たちの美食の未来には何が待っているのか。<br>
+                            この映画は、その秘密のレシピが、どころどころに、散りばめられている。
+                        </p>
+                    </li>
+                    <li>
+                        <p class="name">江部拓弥<span>dancyu編集長</span></p>
+                        <p class="text">
+                            映画を観終わってすぐ、地団駄を踏みました。<br>
+                            登場するノーマの料理はどれも繊細で美しく、うっとり。<br>
+                            闘う料理人たちの姿勢は実に刺激的で、魅力的。<br>
+                            あぁもう東京でノーマの料理を食べることが叶わないと思うと、悔しくて悔しくて。
+                        </p>
+                    </li>
+                    <li>
+                        <p class="name">山本益博<span>料理評論家</span></p>
+                        <p class="text">
+                            レストランが丸ごと引っ越しをするという前代未聞のイベント。<br>
+                            その全貌が明かされたこれまた稀有なドキュメンタリー映画。
+                        </p>
+                    </li>
+                    <li>
+                        <p class="name">マイケル・ブース<span>作家</span></p>
+                        <p class="text">
+                            世界屈指のカリスマ性と影響力を誇る現役シェフの、美しく温かなポートレートだ。<br>
+                            僕のような食道楽は必見！
+                        </p>
+                    </li>
+                    <li>
+                        <p class="name">坂本大三郎<span>山伏</span></p>
+                        <p class="text">
+                            土地の食材たちの声を聞き、知恵と技を駆使してつくられたnomaの料理の数々は、<br>
+                            自由な味覚の世界へ僕らを誘ってくれるかもしれない。<br>
+                            この映画はそんな幻想を抱かせてくれた。
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav class="top-nav">
+            <div class="top-nav_burger">
+                <a>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="top-nav_contents">
+                <div class="bg-circle"></div>
+                <ul class="top-nav_contents_list">
+                    <li>
+                        <a class="half-transparent" href="#top">
+                            <img src="http://www.nomatokyo.ayapro.ne.jp/img/nav_top.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="half-transparent" href="#introduction">
+                            <img src="http://www.nomatokyo.ayapro.ne.jp/img/nav_intro.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="half-transparent" href="#story">
+                            <img src="http://www.nomatokyo.ayapro.ne.jp/img/nav_story.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="half-transparent" href="#cast">
+                            <img src="http://www.nomatokyo.ayapro.ne.jp/img/nav_cast.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="half-transparent" href="#staff">
+                            <img src="http://www.nomatokyo.ayapro.ne.jp/img/nav_staff.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="half-transparent" href="#about-noma">
+                            <img src="http://www.nomatokyo.ayapro.ne.jp/img/nav_about.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="half-transparent" href="#theater">
+                            <img src="http://www.nomatokyo.ayapro.ne.jp/img/nav_theater.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="half-transparent js-modal-open" href="">
+                            <img src="http://www.nomatokyo.ayapro.ne.jp/img/nav_comment.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section id="top" class="top">
+            <div class="shrimp-left">
+                <img src="common/img/top/shrimp_left.png" alt="">
+            </div>
+            <div class="shrimp-right">
+                <img src="common/img/top/shrimp_right.png" alt="">
+            </div>
+            <div class="twitter">
+                <a class="half-transparent" href="https://twitter.com/nomatokyo_movie" target="_blank">
+                    <img src="common/img/top/twitter.png" alt="">
+                </a>
+            </div>
+            <div class="facebook">
+                <a class="half-transparent"
+                    href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2F%25E3%2583%258E%25E3%2583%25BC%25E3%2583%259E%25E6%259D%25B1%25E4%25BA%25AC-%25E4%25B8%2596%25E7%2595%258C%25E4%25B8%2580%25E3%2581%25AE%25E3%2583%25AC%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25A9%25E3%2583%25B3%25E3%2581%258C%25E6%2597%25A5%25E6%259C%25AC%25E3%2581%25AB%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E6%259D%25A5%25E3%2581%259F-1737222556527122%2F"
+                    target="_blank">
+                    <img src="common/img/top/facebook.png" alt="">
+                </a>
+            </div>
+            <div class="notice">
+                <a class="half-transparent iframe" href="https://www.youtube.com/embed/9-CYFAzmnJI">
+                    <img src="common/img/top/notice.png" alt="予告編">
+                </a>
+            </div>
+            <div class="top-airplane">
+                <img src="common/img/top/toRight_airplane.png" alt="">
+            </div>
+            <div class="bottom-airplane">
+                <img src="common/img/top/toLeft_airplane.png" alt="">
+            </div>
+            <p class="release-text">
+                12/10&nbsp;&nbsp;&nbsp;&nbsp;<span class="week">sat</span><span
+                    class="small">より</span>ヒューマントラストシネマ有楽町、YEBISU GARDEN CINEMA<span class="small">ほか</span>全国順次公開!!
+            </p>
+        </section>
+        <div class="banner-area">
+            <ul>
+                <li>
+                    <a class="half-transparent" href="http://dalarna.jp/" target="_blank">
+                        <img src="http://www.nomatokyo.ayapro.ne.jp/img/banner1.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a class="half-transparent" href="https://www.nkbmarche.jp/" target="_blank">
+                        <img src="http://www.nomatokyo.ayapro.ne.jp/img/banner2.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <section id="introduction" class="introduction">
+            <div class="section_top introduction_top">
+                <span>INTRODUCTION</span>
+            </div>
+            <div class="fixed-bg introduction_contents">
+                <div class="texts">
+                    <p class="title">世界一のレストラン「ノーマ」が日本にやって来た！</p><br>
+                    <p class="title">料理界の革命家と呼ばれるシェフ、レネ・レゼピの新たな挑戦が始まる──</p>
+                    <p class="explanation">
+                        2015年1月。カリスマシェフのレネ・ゼネピ率いる「ノーマ（noma）」が、期間限定店を開店するため、デンマーク・コペンハーゲンから日本にやってきた。ノーマはイギリスの月刊誌「レストラン」による「世界のベストレストラン50（The
+                        World's 50 Best
+                        Restaurants）」で2016年の世界5位に輝き、7年連続のベスト5入り（内4回は1位を獲得!）を果たし、独創的で高い芸術性と味が世界で称賛され、北欧の食材しか使用しないことでも知られている。また、2016年でいったん閉店し、自然との共生を掲げてアーバンファームを作り、再オープンを目指すと発表したことでも話題を呼んだ。<br>
+                        7万円近い高価なメニューにも関わらず、期間中に用意できる約2,000席に対し、世界各国の美食家たちからの応募が殺到。6万2000人がウェイティングリストに名を連ねたことでも注目を集めた「ノーマ・アット・マンダリン・オリエンタル・東京」。レネたちは全く勝手のわからない日本で、いままで目にしたこともない素材を使用し、世界一という名声や重圧に耐え、自らの哲学を貫き通すことが出来るのだろうか──。
+                    </p>
+                </div>
+                <div class="texts">
+                    <p class="title">「ノーマ」を支える若き料理人たち</p><br>
+                    <p class="title">苦悩と挫折を乗り越え、天才シェフ、レネの求めるレシピを生み出す瞬間に迫る！</p>
+                    <p class="explanation">
+                        料理人としてのキャリア史上最大の難関に挑むのは、タイム誌で「世界で最も影響力のある100人」にも選ばれているシェフ、レネ・レゼピと「ノーマ」で働く国際色豊かなレシピ開発しーむの面々。天才、カリスマと称賛され、「ノーマ」の絶対的な存在であるレネの審美眼に叶うメニューを作り上げようと、スタッフたちは寝食の時間も削り、日々、レシピ開発に挑む。オープン15日前、日本に到着したレネは、長期間に渡ってチームが開発してきた日本洋のメニューを見て、彼らに「本店と同じメニューじゃ意味がない」と厳しく叱責する。"常に挑戦し、進化し続けること"を求めるレネとスタッフたちの姿からは、今まで誰も目にすることのなかった「ノーマ」の神髄を垣間見ることが出来る。
+                    </p>
+                </div>
+                <div class="texts">
+                    <p class="title">「ノーマ」に気づかされる日本の魅力</p><br>
+                    <p class="title">その土地の"時間"と"場所"を感じさせる独創的で芸術的な料理の数々</p>
+                    <p class="explanation">
+                        『ノーマ東京
+                        世界一のレストランが日本にやって来た』は、世界でも有数の優れた食文化の創造性とインスピレーションの探索であり、人と場所、光景と音、味の匂いへの発見の物語である。日本での食材探しに関して、「日本の自然や文化と触れ合ることが自分たちの表現方法を磨いていく」とレネは語っている。北海道から沖縄まで日本全国を一年以上に渡って巡り、食材探しに奔走したレネとスタッフたち。そんな彼らに同行したのは、ミシュランの二ツ星レストランに選ばれた「レフェルヴェソンス」の生江史伸シェフ、銀座の高級寿司店「すきやばし
+                        次郎」小野禎一氏や料理評論家の山本益博氏ら。また、スタイリストで「ARTS &
+                        SCIENCE」のオーナーを務めるソニア・パーク氏が食器のキュレーションを担当。食材だけでなく店内の隅々まで"日本"にこだわり抜いた「ノーマ・アット・マンダリン・オリエンタル・東京」の全貌が今、明らかになる。
+                    </p>
+                </div>
+            </div>
+            <div class="introduction_bottom"></div>
+        </section>
+        <section id="story" class="story">
+            <div class="section_top story_top">
+                <span>STORY</span>
+            </div>
+            <div class="story_circle">
+                <div class="bg-circle">
+                    2015年、カリスマシェフ レネ・レゼピが総勢77名のスタッフを引き連れ、<br>
+                    世界初の試みとして「ノーマ・アット・マンダリン・オリエンタル・東京」を<br>
+                    期間限定で開店するために来日。<br>
+                    デンマークの本店を休業し、スタッフ全員で日本へ行くというニュースは、世界中で大きな話題となった。<br>
+                    本店と同様に、その土地の食材を使うというコンセプトを貫くレネ。<br>
+                    食材探しは日本全国を巡り、1年以上を費やし、7回に渡って行われた。<br>
+                    <p class="two-color two-color01">「作り直しだ、これじゃお客には出せない」</p>
+                    オープン15日前、レネはレシピ開発チームが提案したメニューを一蹴する。<br>
+                    開店まで残り僅かな時間の中、一からレシピを練り直すスタッフたち。<br>
+                    レネの望む究極のひと皿とは？<br>
+                    日本でだからこそ味わうことのできるノーマのメニューとは一体何なのか？<br>
+                    更なる進化を目指し、自問自答を繰り返す。<br>
+                    <p class="two-color two-color02">「おいしいよ、これで完成だ」</p>
+                    オープン5日前。ようやく提供するメニューが完成。<br>
+                    残りのスタッフが到着し、レネは調理方法を細かく伝授していく。<br>
+                    スマフォで見本用の写真を撮り、レネの一挙手一投足を見逃さないよう緊張した面持ちのスタッフたち。<br>
+                    オープン前日、最終リハーサルを行う。<br>
+                    慣れない調理場と作業内容に失敗を続出するスタッフたちにレネの檄が飛ぶ。<br>
+                    「失敗するなんてガッカリだ、全部やり直せ！」<br><br>
+                    そしていよいよオープン当日を迎える──。
+                </div>
+            </div>
+            <div class="story_bottom">
+                <img src="common/img/story/pan.png" alt="">
+            </div>
+        </section>
+        <section id="cast" class="cast">
+            <div class="section_top cast_top">
+                <span>CAST</span>
+            </div>
+            <div class="cast_headchef">
+                <div class="man">
+                    <img src="common/img/cast/headchef.png" alt="">
+                </div>
+                <div class="text">
+                    <p class="headtext">生の素材を手に取り、まだ土のこぼれるそれを口に含む。</p>
+                    <p class="headtext">そのとき人は素材を尊ぶことを学ぶのだ。</p>
+                    <p class="name">レネ・レゼピ<span>René Rezepi</span></p>
+                    <p class="description">
+                        1977年12月16日、デンマーク・コペンハーゲン生まれ。<br>
+                        地元の料理学校で学んだ後、世界有数の一流レストランであるスペインの「エル・プリ」やアメリカの「フレンチ・ランドリー」で修業を積む。2003年、25歳で「ノーマ」のヘッドシェフ兼、創設者の一人となる。レネの生み出す独創的なメニューや審美眼に優れた盛り付けは世界で高く評価され、イギリスの月刊誌「レストラン」による「世界のベストレストラン50（The
+                        World's 50 Best
+                        Restaurants）」では5度も1位に輝いている。北欧料理に一大革命を起こした立役者として注目を集め、12年にはタイム誌の「世界で最も影響力のある100人」に選出。移民として虐められてきた過去や食材やノーマの今後について赤裸々に語ったドキュメンタリー映画『ノーマ、世界を変えるレストラン』（15）は日本でも公開され、スマッシュヒットを記録した。
+                    </p>
+                </div>
+                <div class="spoon">
+                    <img src="common/img/cast/spoon.png" alt="">
+                </div>
+                <div class="fork">
+                    <img src="common/img/cast/fork.png" alt="">
+                </div>
+            </div>
+            <div class="cast_chefs">
+                <img src="common/img/cast/chefs.png" alt="">
+            </div>
+            <div class="cast_bottom">
+                <img class="js-cast-airplane" src="common/img/cast/airplane.png" alt="">
+            </div>
+        </section>
+        <section id="staff" class="staff">
+            <div class="section_top staff_top">
+                <span>STAFF</span>
+            </div>
+            <div class="staff_contents">
+                <div class="note">
+                    <p class="title">Director's note</p>
+                    <p class="text">
+                        レネが日本に行く計画を話してくれた時のことをよく覚えている。彼と共に、調理技術を題材にしたテレビ番組の企画書を書いているときだった。<br>
+                        レネたちが挑戦しようとしている現場に一緒にいられるなんて恵まれている、なんて光栄なことなんだと思った。でもその気持ちはすぐに覆されたよ。朝の7時に彼が私の泊っているホテルの部屋のドアをノックして「ちょっとエクササイズしよう」と言ってきたんだ。彼は右腕にブルガリアンバッグを抱えていた。ランニングするときに肩に背負う20キロの砂袋だよ。そして左手にはりんごがひとつ。レネの顔には私への同情交じりの笑みが満面に浮かんでいたね。腕立て伏せを50回しようとレネが声を張り上げた。それから海辺に向かって走るんだ。それも40歩ごとに腰をかがめて草を摘みながら。彼は砂を払った草を私の口に入れては、「味わって！」と言ってきたよ。そんな過酷なジョギングプログラムを終えた後、ホテルのバーで彼のエスプレッソを飲みながら、日本での出店計画について聞いたんだ。映画にしたいとすぐに思った。日本の土を一緒に踏みたいと。これは、ビンセント・バン・ゴッホが「ひまわり」を描いている横に座るかのような貴重な機会だと感じた。レネの目に映るものを見たかった。そして、映画を通して世界に向けて発信したい、垣間見せたいと思ったんだ。
+                    </p>
+                </div>
+                <div class="profile">
+                    <div class="man">
+                        <img src="common/img/staff/director.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p class="title">Director's Profile</p>
+                        <p class="name">モーリス・デッカーズ<span>Maurice Dekkers</span></p>
+                        <p class="description">
+                            アムステルダムに拠点を構えるジャーナリストであり、映画製作者、起業家。<br>
+                            ロイヤル・アカデミー・オブ・アーツを卒業後に自身の会社DAHLで、食を扱うテレビ番組「KEURINGSDIENST VAN
+                            WAARDE」（03～）を制作、監督。この作品は100以上ものエピソードがあり、オランダでは人気番組のひとつ。イギリスの公共テレビ局、チャンネル4でも「FOOD
+                            UNWRAPPED」の名で放送されており、高い人気を誇っている。また、オランダ人ジャーナリストのテェゥン・ファン・カェゥクン氏がココア産業で重労働に就かされている奴隷の子供たちの存在を訴えたテレビ番組「トニーズ・チョコロンリー～チョコレート業界に立ち向かった男～」（03）では、本作をきっかけに奴隷労働のないチョコレート「トニーズ・チョコロンリー」発売された。「トニーズ・チョコロンリー」は今やオランダ最大手のチョコレートブランドになっている。また、テェゥン・ファン・カェゥクン氏と共に活動するジャーナリストを追ったドキュメンタリー「TONY」（16）では1w自身も出演している。本作『ノーマ東京
+                            世界一のレストランが日本にやって来た』で長編ドキュメンタリー映画デビュー。
+                        </p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="5" valign="top" class="filmofraphy">Filmofraphy</td>
+                                    <td>2003　テレビシリーズ KEURINGSDIENST VAN WAARDE（FOOD UNWRAPPED）</td>
+                                </tr>
+                                <tr>
+                                    <td>2004　TALES OF THE SEA ※プロデューサー</td>
+                                </tr>
+                                <tr>
+                                    <td>2006　トニーズ・チョコロンリー～チョコレート業界に立ち向かった男～</td>
+                                </tr>
+                                <tr>
+                                    <td>2007　FIERCE KITCHEN ※プロデューサー</td>
+                                </tr>
+                                <tr>
+                                    <td>2016　ノーマ東京 世界一のレストランが日本にやって来た</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="staff_bottom">
+                <img src="common/img/staff/cloud.png" alt="">
+            </div>
+        </section>
+        <section id="about-noma" class="about-noma">
+            <div class="section_top about-noma_top">
+                <span>ABOUT NOMA</span>
+            </div>
+            <div class="about-noma_contents">
+                <div class="texts">
+                    <p>
+                        <span>2</span>003年、レネ・レゼピと元共同経営者クラウス・マイヤーが、デンマーク・コペンハーゲンにオープンしたレストラン。オープン当初は、北欧の食材だけというコンセプトに対して、冷やかな視線を浴び、売り上げのない日が続いた。しかし、「時間」と「場所」を感じさせる料理というコンセプトを掲げてからは徐々に評判を呼び、08年にフランスのミシュランで2つ星を獲得した。レネの生み出す独創的な料理は、北欧料理に対する既成概念を変えたといわれている。「世界ベストレストラン50」では2010年から4度も1位に輝き、「世界一のレストラン」と評されているのと同時に、「世界で一番予約困難な店」としても有名。「ノーマ」は食材の美味しさを最大限に引き出すだけでなく、新しい触感を生み出す努力や斬新で独創的なスタイルが、世界中の美食家を魅了し、驚きと感動を与え続けている。
+                    </p>
+                    <p>
+                        <span>日</span>本進出のきっかけは、京都の料亭「菊乃井」の主人、村田氏に招かれて日本を訪れたことで、「日本の食文化の豊かさに心を打たれた」という。日本で出店するために、レネたちスタッフは様々なホテルや店舗に打診を続ける。そんな中、唯一、返信があったのが、マンダリン・オリエンタル
+                        東京だった。ホテル総支配人（当時）のアンソニー・コスタ氏はあるインタビュー記事で次のように答えている。「レネ・レゼピは世界で最も影響力のあるシェフであり、日本に対する深い情熱を持っている。」その想いを形にするため、レネたちスタッフ、家族の渡航や宿泊先の手配、そして「ノーマ・アット・マンダリン・オリエンタル・東京」の開店と運営に尽力した。
+                    </p>
+                    <p>
+                        <span class="brackets">「ノ</span>ーマ・アット・マンダリン・オリエンタル・東京」は2015年1月9日～2月14日までの5週間限定でマンダリン・オリエンタル
+                        東京にて出店されたレストラン。14年6月23日開始のオンライン予約は1日で埋まり、6万2000人がウェイティングリストに並び、2週間の営業期間延長が急遽決定した。期間中、約3600人のゲストに日本で調達した食材を生かした14～16品からなる斬新なメニューを提供。日本国内はもちろん、台北、シンガポール、オーストラリア、ドバイなど世界各国の美食家たちが食事を楽しんだ。
+                    </p>
+                </div>
+                <div class="scroll-img">
+                    <img src="common/img/about-noma/scroll.png" alt=""><img src="common/img/about-noma/scroll.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="about-noma_bg-blue"></div>
+            <div class="about-noma_bg-lightblue">
+                <img src="common/img/about-noma/title.png" alt="">
+            </div>
+            <div class="fixed-bg about-noma_involvement">
+                <div class="about-noma_involvement_contents">
+                    <div class="people">
+                        <p class="name">生江史伸<span>レフェルヴェソンス エグゼグティブシェフ</span></p>
+                        <p class="title">●ノーマ・アット・マンダリン・オリエンタル・東京との関わり</p>
+                        <p class="text">レネ、ノーマスタッフの食材探しに同行、生産者、食材の紹介</p>
+                        <p class="title">●レネ・レゼピ、ノーマスタッフとの出会い</p>
+                        <p class="text">
+                            <span>2014年　春</span><br>
+                            レシピ開発チームのダニエル・ジュスティから「ノーマ・アット・マンダリン・オリエンタル・東京」の出店計画とその際に使用する食材を探しているので協力して欲しいという旨のメールが届く。「森を見に行く」「精進料理を食べる」「農家の方に会いたい」というのが、レネからのリクエストだった。
+                        </p>
+                        <p class="text">
+                            <span>7月</span><br>
+                            千葉県の農家、浅野悦男さん（エコファームアサノ）や長野のイチゴ農家、築地市場の卸売業者を紹介。鎌倉の東慶寺では精進料理をふるまっていただき、日本の伝統的な作法のひとつひとつに対して、レネたちはとても興味を持ったという。ブナ林を中心とした豊かな自然が残る青森県白神山地では、マタギの方々に森を案内してもらう。レネたちは様々な植物の知識や味覚を披露し、同行者たちを驚かせた。
+                        </p>
+                        <p class="title">●シェフ、レネ・レゼピとは──</p>
+                        <p class="text">恐れを持たない、ハートの強い骨太な人であると同時に、大変繊細な人でもあると思う。レネを支えている奥さんや子どもたち、家族の存在はとても大
+                            きく、彼が類まれなる才能を開花させられたのは彼女たちのお陰でもあるのではないでだろうか。
+                            レネはどちらかというと説明することを避けるタイプ。料理もそうだし、それ以外に「ノーマ」でやっていること、自分が考えていることに図して全てを見
+                            せようとはしない。見て感じでという部分がとても強い。</p>
+                        <p class="title">●ノーマアットマンダリン・オリエンタル・東京に関わって</p>
+                        <p class="text">「ノーマ」が生み出した料理の新流「ノルディックキュイジーヌ」は、北欧の食材を使うだけではなく、生産者たちの食も高め、都市と地方のコミュ
+                            ニケーションを培い、地域、国全体が活性化していけるものである。レネやノーマのスタッフたちが日本文化の再認識西発見をさせてくれ、気付さの
+                            きっかけを与えてくれたと思う。地方の知られていない食材や伝統のある職人たちの存在をもっと世の中に発信していかなければいけないと感しさせ
+                            られた。彼らは日本の食文化に対して、自分たちには全く手の届かない存在だと思っており、そこに散えて挑戦することにかを感じていた。まっさら
+                            な所に来たからこそ、自分たちの力が試されると、楽しんでチャレンジする姿に刺激を受けた。</p>
+                        <div class="address">
+                            <a href="http://www.leffervescence.jp/">レフェルヴェソンス</a>
+                            <p>〒106-0031 港区西麻布2-26-4</p>
+                            <p>Tel 03-5766-9500</p>
+                            <p>E-MAIL info@leffervescence.jp</p>
+                        </div>
+                    </div>
+                    <div class="people">
+                        <p class="name">兼子大輔<span>LASオーナー・シェフ</span></p>
+                        <p class="title">●ノーマ・アット・マンダリン・オリエンタル・東京との関わり</p>
+                        <p class="text">弟である兼子享康さんがソムリエとして勤務</p>
+                        <p class="title">●レネ・レゼピ、ノーマへの想い</p>
+                        <p class="text">10年ぐらい前から噂には聞いており、フランス、スペインの次にトップシェフが出てくるのは北欧からではないかと注目していた。2011年、スーシェフ
+                            だった高橋悼一さんと一緒にデンマークの「ノーマ」本店を訪れる。その際、高橋さんに履歴書を持っていくように意めたという。この出会いがきっかけ
+                            で高橋さんは「ノーマ」で勤務することになった。 レネたちが常に緊張感を持って、リスクのあることにチャレンジしている姿は称賛されるべきで、おいしい、おしくないという判断基準だけで好するの
+                            はつまらない。彼らが勇気を持って挑戦したものを受け止めることが出来ることに心から感謝をし、自分も更に張らなければとい利さをもらっている。</p>
+                        <div class="address">
+                            <a href="http://www.leffervescence.jp/">L'AS</a>
+                            <p>〒107-0062 港区青山6-16-3南青山コトリビル1F</p>
+                            <p>Tel 080-3370-6058</p>
+                        </div>
+                    </div>
+                    <div class="people">
+                        <p class="name">山﨑俊明<span>株式会社アキタ 経営戦略室 室長</span></p>
+                        <p class="title">●ノーマ・アット・マンダリン・オリエンタル・東京との関わり</p>
+                        <p class="text">「きよら」の卵を提供</p>
+                        <p class="title">●レネ・レゼピ、ノーマスタッフとの出会い</p>
+                        <p class="text">
+                            2014年9月、スコットランドで開催されたインターナショナルエッグコミッション（IEC）で、ノーマのディレクターであるピーター・クライナー氏と出会う。レストラン「ノーマ」のスタッフ全員で東京に行って期間限定店を開くことを聞き、興味を持つ。10月、偶然、（株）アキタの代表がデンマークのノーマ本店で会食する予定が入っており、「きよら」の卵をプレゼンする機会を得る。
+                            プレゼン時間はわずか20分。その場で卵の提供が成約する。2015年1月、オフィシャルサプライヤー契約の締結を発表する記者会見を実施。
+                            だった高橋悼一さんと一緒にデンマークの「ノーマ」本店を訪れる。その際、高橋さんに履歴書を持っていくように意めたという。この出会いがきっかけ
+                            で高橋さんは「ノーマ」で勤務することになった。 レネたちが常に緊張感を持って、リスクのあることにチャレンジしている姿は称賛されるべきで、おいしい、おしくないという判断基準だけで好するの
+                            はつまらない。彼らが勇気を持って挑戦したものを受け止めることが出来ることに心から感謝をし、自分も更に張らなければとい利さをもらっている。</p>
+                        <div class="address">
+                            <a href="http://www.leffervescence.jp/">株式会社アキタ</a>
+                            <p>〒720-0814 広島福山市光南町3-7-30</p>
+                            <p>Tel 084-928-8222</p>
+                            <p>E-MAIL info@leffervescence.jp</p>
+                        </div>
+                    </div>
+                    <div class="people">
+                        <p class="name">合田泰子<span>株式会社ラシーヌ 代表取締役社長</span></p>
+                        <p class="title">●ノーマ・アット・マンダリン・オリエンタル・東京との関わり</p>
+                        <p class="text">「ヴァンナチュール」のワインを提供</p>
+                        <p class="title">●レネ・レゼピ、ノーマスタッフとの出会い</p>
+                        <p class="text">「ノーマ東京」のためにワインを当初、デンマークから輸入することを考えていたが、造り手たちから、 ㈱ラシーヌが輸入していると推薦を受けていた。
+                            メールでのワインリスト確認のやりとりの後、2014年9月にシェフソムリエのマッズ·クレッペが来日し、ラシーヌが「ノーマ・アット・マンダリン・オリエ
+                            ンタル・東京」で提供するワインの公式サプライヤーに決定した。
+                            マッズは、「デンマークの本店でセレクションしているワインの実に重要なワインをたくさん扱っているなんてきた。しかも日本では20年も前からェ
+                            ン・ナチュールのワインが輸入され、親しまれているとはほんとうにすごいことだね」と衝撃を受けていたという。
+                            プレゼン時間はわずか20分。その場で卵の提供が成約する。2015年1月、オフィシャルサプライヤー契約の締結を発表する記者会見を実施。
+                            だった高橋悼一さんと一緒にデンマークの「ノーマ」本店を訪れる。その際、高橋さんに履歴書を持っていくように意めたという。この出会いがきっかけ
+                            で高橋さんは「ノーマ」で勤務することになった。 レネたちが常に緊張感を持って、リスクのあることにチャレンジしている姿は称賛されるべきで、おいしい、おしくないという判断基準だけで好するの
+                            はつまらない。彼らが勇気を持って挑戦したものを受け止めることが出来ることに心から感謝をし、自分も更に張らなければとい利さをもらっている。</p>
+                        <p class="title">※ヴァン・ナチュールとは</p>
+                        <p class="text">有機農法によって栽培されたブドウで、少量の亜硫酸以外何も加えず(または亜硫酸非使用)、作為を抑えて醸造されたワイン造り手と共に進化する複雑かつ体
+                            な自然派ワインは、ひとつのスタイルとして認知されつつある。また、合田泰子は)ラシーヌ創立以前から20年以上、ヴァン・ナチュールのワインを取り扱っている。</p>
+                        <div class="address">
+                            <a href="http://www.leffervescence.jp/">株式会社ラシーヌ</a>
+                            <p>〒160-0008 新宿区三栄町18-21パークサイドロ581</p>
+                            <p>Tel 03-5366-3931</p>
+                            <p>E-MAIL info@racines.co.jp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-noma_bottom">
+                <img src="common/img/about-noma/eiffel-tower.png" alt="">
+            </div>
+        </section>
+        <section id="theater" class="theater">
+            <div class="section_top theater_top">
+                <span>THEATER</span>
+            </div>
+            <div class="theater_contents">
+                <div class="appreciation">
+                    <img src="common/img/theater/appreciation-ticket.png" alt="">
+                </div>
+                <a class="half-transparent cloud-btn"
+                    href="https://www.major-j.com/cinema_information.php?id=M20160917015">
+                    <img src="common/img/theater/cloud-btn.png" alt="">
+                </a>
+                <ul class="area-btns">
+                    <li>
+                        <a href="#hokkaido-touhoku">北海道・東北</a>
+                    </li>
+                    <li>
+                        <a href="#kanto-kosinetsu">関東・甲信越</a>
+                    </li>
+                    <li>
+                        <a href="#chubu-hokuriku">中部・北陸</a>
+                    </li>
+                    <li>
+                        <a href="#kansai">関西</a>
+                    </li>
+                    <li>
+                        <a href="#chugoku-sikoku">中国・四国</a>
+                    </li>
+                    <li>
+                        <a href="#kyushu-okinawa">九州・沖縄</a>
+                    </li>
+                </ul>
+                <div class="table">
+                    <p id="hokkaido-touhoku">北海道・東北</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>都道府県</th>
+                                <th class="line">劇場名</th>
+                                <th>公開日</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>北海道</td>
+                                <td>
+                                    <a class="half-transparent" href="">シアターキノ</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>北海道</td>
+                                <td>
+                                    <a class="half-transparent" href="">シネマ・トーラス</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>岩手</td>
+                                <td>
+                                    <a class="half-transparent" href="">盛岡ルミエール</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>宮城</td>
+                                <td>
+                                    <a class="half-transparent" href="">フォーラム仙台</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>山形</td>
+                                <td>
+                                    <a class="half-transparent" href="">フォーラム山形</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>山形</td>
+                                <td>
+                                    <a class="half-transparent" href="">フォーラム東根</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>山形</td>
+                                <td>
+                                    <a class="half-transparent" href="">鶴岡まちなかキネマ</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p id="kanto-kosinetsu">関東・甲信越</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>都道府県</th>
+                                <th class="line">劇場名</th>
+                                <th>公開日</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>東京</td>
+                                <td>
+                                    <a class="half-transparent" href="">ヒューマントラストシネマ有楽町</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>東京</td>
+                                <td>
+                                    <a class="half-transparent" href="">YEBISU GARDEN CINEMA</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>東京</td>
+                                <td>
+                                    <a class="half-transparent" href="">アップリンク</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>神奈川</td>
+                                <td>
+                                    <a class="half-transparent" href="">横浜シネマジャック＆ベティ</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>神奈川</td>
+                                <td>
+                                    <a class="half-transparent" href="">川崎市アートセンター</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>神奈川</td>
+                                <td>
+                                    <a class="half-transparent" href="">映画.comシネマ</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>神奈川</td>
+                                <td>
+                                    <a class="half-transparent" href="">CINEMA AMIGO</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>栃木</td>
+                                <td>
+                                    <a class="half-transparent" href="">宇都宮ヒカリ座</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>栃木</td>
+                                <td>
+                                    <a class="half-transparent" href="">小山シネマロブレ</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>長野</td>
+                                <td>
+                                    <a class="half-transparent" href="">長野ロキシー</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>新潟</td>
+                                <td>
+                                    <a class="half-transparent" href="">シネ・ウインド</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p id="chubu-hokuriku">中部・北陸</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>都道府県</th>
+                                <th class="line">劇場名</th>
+                                <th>公開日</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>愛知</td>
+                                <td>
+                                    <a class="half-transparent" href="">伏見ミリオン座</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>静岡</td>
+                                <td>
+                                    <a class="half-transparent" href="">静岡シネ・ギャラリー</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>静岡</td>
+                                <td>
+                                    <a class="half-transparent" href="">シネプラザサントムーン</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>静岡</td>
+                                <td>
+                                    <a class="half-transparent" href="">シネマ イーラ</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>三重</td>
+                                <td>
+                                    <a class="half-transparent" href="">伊勢進富座</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>富山</td>
+                                <td>
+                                    <a class="half-transparent" href="">ほとり座</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p id="kansai">関西</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>都道府県</th>
+                                <th class="line">劇場名</th>
+                                <th>公開日</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>大阪</td>
+                                <td>
+                                    <a class="half-transparent" href="">テアトル梅田</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>京都</td>
+                                <td>
+                                    <a class="half-transparent" href="">京都シネマ</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>兵庫</td>
+                                <td>
+                                    <a class="half-transparent" href="">シネ・リーブル神戸</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>兵庫</td>
+                                <td>
+                                    <a class="half-transparent" href="">豊岡劇場</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p id="chugoku-sikoku">中国・四国</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>都道府県</th>
+                                <th class="line">劇場名</th>
+                                <th>公開日</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>広島</td>
+                                <td>
+                                    <a class="half-transparent" href="">サロンシネマ</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>岡山</td>
+                                <td>
+                                    <a class="half-transparent" href="">シネマ・クレール</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>山口</td>
+                                <td>
+                                    <a class="half-transparent" href="">山口情報芸術センター</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>愛媛</td>
+                                <td>
+                                    <a class="half-transparent" href="">シネマルナティック</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p id="kyushu-okinawa">九州・沖縄</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>都道府県</th>
+                                <th class="line">劇場名</th>
+                                <th>公開日</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>福岡</td>
+                                <td>
+                                    <a class="half-transparent" href="">KBCシネマ</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>大分</td>
+                                <td>
+                                    <a class="half-transparent" href="">大分シネマ5</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>大分</td>
+                                <td>
+                                    <a class="half-transparent" href="">日田シネマテーク・リベルテ</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>佐賀</td>
+                                <td>
+                                    <a class="half-transparent" href="">シアターシエマ</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>宮崎</td>
+                                <td>
+                                    <a class="half-transparent" href="">宮崎キネマ館</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>熊本</td>
+                                <td>
+                                    <a class="half-transparent" href="">Denkikan</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>鹿児島</td>
+                                <td>
+                                    <a class="half-transparent" href="">天文館シネマパラダイス</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                            <tr>
+                                <td>沖縄</td>
+                                <td>
+                                    <a class="half-transparent" href="">桜坂劇場</a>
+                                </td>
+                                <td>上映終了</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="staff-cast">
+                    <div class="staff-cast_staff">
+                        <p>STAFF</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="eng">Director ● Maurice Dekkers</td>
+                                    <td class="jap">監督 ● モーリス・デッカーズ</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Producer ● Dan Blazer</td>
+                                    <td class="jap">プロデューサー ● ダン・ブレザー</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Producer ● Nelsje Musch-Elzinga</td>
+                                    <td class="jap">プロデューサー ● ノースジェ・マシェールジンガ</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Executive Producer ● Marc Blazer</td>
+                                    <td class="jap">エグゼグティブプロデューサー ● マーク・ブレザー</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Executive Producer ● Barbara Coronel</td>
+                                    <td class="jap">エグゼグティブ・ブロデューサー ● バーバラ・コロネル</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Cinematography ● Hans Bouma</td>
+                                    <td class="jap">撮影 ● ハンス･ボウマ</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Music ● Nicolas Jaar</td>
+                                    <td class="jap">音楽 ● ニコラスジャー</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Film Editing ● Pelle Asselbergs</td>
+                                    <td class="jap">編集 ● ベレ·アソベルーシ</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Production Company ● BlazHoffski</td>
+                                    <td class="jap"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="staff&cast_cast">
+                        <p>CAST</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="eng">René Redzepi</td>
+                                    <td class="jap">レネ・レゼピ</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Lars Williams</td>
+                                    <td class="jap">ラースウィリアムズ</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Thomas Frebel</td>
+                                    <td class="jap">トーマス・フレベル</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Daniel Giusti</td>
+                                    <td class="jap">ダニエル・ジュスティ</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Rosio Sanchez</td>
+                                    <td class="jap">ロシオ・サンチェス</td>
+                                </tr>
+                                <tr>
+                                    <td class="eng">Kim Mikkola</td>
+                                    <td class="jap">キム-ミッコラ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="cloud">
+                    <img src="common/img/theater/cloud.png" alt="">
+                </div>
+            </div>
+            <a class="move-top" href="#">
+                <span>PAGE UP</span>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <img src="common/img/footer/fotter_txt.png" alt="">
+    </footer>
+</body>
+
+</html>
